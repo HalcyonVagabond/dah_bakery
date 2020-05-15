@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="breadList">
+    <h3>Our Current Selection</h3>
+    {% for bread in bread_inventory %}
+        <p>{{bread.id}}. {{bread.name}} from {{bread.region}}</p>
+    {% endfor %}
+</section>
+
+{% endblock %}
