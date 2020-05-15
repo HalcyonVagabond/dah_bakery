@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bangazon Workforce Management</title>
+
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}" type="text/css" media="screen" />
+
+    {% block css %}
+    {% endblock %}
+    
+</head>
+
+<body>
+
+    <nav id="navContainer">
+        <a href="{% url 'breadapp:bakery_home' %}"></a>
+        <div id="navLinkContainer">
+            
+        </div>
+    </nav>
+
+    <div id="mainContainer" >
+        {% block content %}
+        {% endblock %}
+
+        {% block scripts %}
+        {% endblock scripts %}
+
+    </div>  
+
+</body>
+
+</html>
