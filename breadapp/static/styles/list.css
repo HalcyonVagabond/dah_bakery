@@ -1,0 +1,28 @@
+#listBackground{
+    background-image: url(../images/listEasel.png);
+  }
+
+.listImage{
+    width: 20px;
+    margin-left: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.breadList{
+    position: absolute;
+    left: 32%;
+    top: 11%;
+    height: 56%;
+    max-height: 56%;
+    overflow: auto;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 3px solid black;
+}
+
+.addBreadForm{
+    position: absolute;
+    left: 24%;
+    bottom: 11%;
+}

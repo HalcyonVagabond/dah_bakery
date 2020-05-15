@@ -4,7 +4,7 @@
     padding: 10px;
     position: fixed;
     top: 0;
-    background-color: lavender;
+    background-color: black;
     z-index: 1;
 }
 
@@ -37,4 +37,12 @@
     color: green;
     text-decoration: underline;
     transition: 0.5s ease;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 48px;
+
 }
