@@ -1,13 +1,28 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 
 <section class="breadList">
     <h3>Our Current Selection</h3>
     {% for bread in bread_inventory %}
-        <p>{{bread.id}}. {{bread.name}} from {{bread.region}}</p>
+        <p>{{bread.number}}. {{bread.name}} from {{bread.region}}  <a href='{% url "breadapp:bread_details" bread.id %}'><img class="listImage" src="{% static 'images/bread.png' %}"></a></p>
     {% endfor %}
+    <br>
+    <h4>Add Bread to Our Collection!</h4>
+    <br>
+    <form class='addBread' action="{% url 'breadapp:bakery_home' %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <label for="breadName">Bread: </label>
+            <input id="breadName" name="breadName" type="text" placeholder="name" required>
+        </fieldset>
+        <fieldset>
+            <label for="breadRegion">from: </label>
+            <input id="breadRegion" name="breadRegion" type="text" placeholder="region" required>
+        </fieldset>
+        <input type="submit" value="Add Bread">
+    </form>
 </section>
 
 {% endblock %}
