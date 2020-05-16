@@ -10,7 +10,7 @@
 }
 .breadList{
     position: absolute;
-    left: 32%;
+    left: 34%;
     top: 11%;
     height: 56%;
     max-height: 56%;
@@ -25,4 +25,27 @@
     position: absolute;
     left: 24%;
     bottom: 11%;
+}
+
+#detailsFrameContainer {
+    position: relative !important;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px lightgrey;
+    width: 50%;
+    max-width: 700px;
+    height: 50%;
+    max-height: 70vh;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    padding: 30px;
+    text-align: center;
+}
+
+#detailsFrame{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 98%;
 }

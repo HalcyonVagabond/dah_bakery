@@ -1,14 +1,18 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: black;
 }
 
 #mainContainer {
     margin-top: 70px;
-    background-color: darkgray;
+    background-color: black
 }
 .backgroundImage{
-  width: 90vw;
-  height: 60vw;
+  width: 96vw;
+  max-width: 1300px;
+  height: 58vw;
+  max-height: 700px;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
@@ -17,4 +21,22 @@ body {
     
 }
 
-  
+.hidden{
+  display: none;
+}
+
+.altBackground {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+}
+
+.detailsContainer{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-self: center;
+  margin-top: 10%;
+}
