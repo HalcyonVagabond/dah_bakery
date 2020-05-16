@@ -52,3 +52,16 @@ def bakery_list(request):
     
     elif request.method == 'POST':
         return post_bread(request)
+
+def bakery_inside(request):
+    if request.method == 'GET':
+        bread_inventory = get_bread()
+        template = 'bakery_inside.html'
+        context = {
+            'bread_inventory': bread_inventory
+        }
+
+        return render(request, template, context)
+    
+    elif request.method == 'POST':
+        return post_bread(request)
