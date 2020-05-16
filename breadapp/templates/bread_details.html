@@ -1,14 +1,39 @@
-{% extends 'base.html' %}
+
 {% load static %}
 
-{% block content %}
-
-<div class='sceneImage details'>
-    <div class="greyBackground">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'styles/forms.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'styles/list.css' %}" type="text/css" media="screen" />
+    <title>Details</title>
+</head>
+<body>
+    <div class='altBackground'>
         <section class="detailsContainer">
-
+            <h1>{{bread.name}}</h1>
+            <p>({{bread.region}})</p>
+            <br>
+            {% if bread.length > 0 %}
+                <div class="ingredientsContainer">
+                    <h4>Ingredients:</h4>
+                    {% for ingredient in bread.ingredient_list %}
+                        <article class="ingredient">
+                        <p><em>{{ingredient.amount}}</em> {{ingredient.name}} from {{ingredient.local_source}}</p>
+                        </article>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>This bread needs ingredients! <br> Go inside to get your hand dirty and make some bread.</p>
+            {% endif %}
         </section>
     </div>
-</div>
+</body>
+</html>
 
-{% endblock %}
+

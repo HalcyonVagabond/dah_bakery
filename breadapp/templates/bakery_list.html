@@ -6,7 +6,7 @@
     <article class="breadList">
     <h3>Our Current Selection</h3>
     {% for bread in bread_inventory %}
-        <p>{{bread.number}}. {{bread.name}} from {{bread.region}}  <a href='{% url "breadapp:bread_details" bread.id %}'><img class="listImage" src="{% static 'images/bread.png' %}"></a></p>
+        <p>{{bread.number}}. {{bread.name}} from {{bread.region}}  <a onclick='toggleButton()' target='detailsFrame' href='{% url "breadapp:bread_details" bread.id %}'><img class="listImage" src="{% static 'images/bread.png' %}"></a></p>
     {% endfor %}
     </article>
     <article class="addBreadForm">
@@ -25,5 +25,18 @@
     </form>
     </article>  
 </div>
+<div id="greyBackground" class="hidden">
+    <section id="detailsFrameContainer">
+        <div class="formExit" onclick="toggleButton()">X</div>
+        <iframe id="detailsFrame" name="detailsFrame"></iframe>
+    </section>
+</div>
 
+{% block javascript %}
+    <script>
+        function toggleButton(){
+            document.getElementById('greyBackground').classList.toggle('hidden')
+        }
+    </script>
+{% endblock %}
 {% endblock %}
