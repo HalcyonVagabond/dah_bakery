@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id='insideBackground' class="backgroundImage" >
+    <a href="{% url 'breadapp:bakery_list' %}">
+    <img id='menuBoard' src="../static/images/insideMenuBoard.jpg" alt="">
+    </a>
+    <div id="insideMessage"></div>
+    <img id='mrToastInside' src="../static/images/mrToast.png" alt="">
+    <!-- <img id='mrToastMessageHome' src="../static/images/mrToastMessageHome.png"> -->
+    <a id="doorLinkHome" href="{% url 'breadapp:bakery_list' %}"></a>
+</div>
+
+{% endblock %}

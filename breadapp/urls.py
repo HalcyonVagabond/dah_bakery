@@ -6,6 +6,7 @@ app_name = "breadapp"
 urlpatterns = [
     path('', bakery_home, name='bakery_home'),
     path('list/', bakery_list, name='bakery_list'),
-    path('bread/<int:bread_id>', bread_details, name='bread_details')
+    path('bread/<int:bread_id>', bread_details, name='bread_details'),
+    path('inside/', bakery_inside, name='bakery_inside')
 
 ]
