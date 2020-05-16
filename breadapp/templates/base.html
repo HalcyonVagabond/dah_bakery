@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{% static 'styles/base.css' %}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{% static 'styles/navbar.css' %}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{% static 'styles/forms.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{% static 'styles/list.css' %}" type="text/css" media="screen" />
 
     {% block css %}
     {% endblock %}
@@ -18,7 +20,7 @@
 <body>
 
     <nav id="navContainer">
-        <a href="{% url 'breadapp:bakery_home' %}"></a>
+        <a href="{% url 'breadapp:bakery_home' %}"><img id='logo' src="../static/images/bread.png" alt="bread"></a>
         <div id="navLinkContainer">
             
         </div>

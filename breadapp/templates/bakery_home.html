@@ -3,26 +3,13 @@
 {% block content %}
 
 
-<section class="breadList">
-    <h3>Our Current Selection</h3>
-    {% for bread in bread_inventory %}
-        <p>{{bread.number}}. {{bread.name}} from {{bread.region}}  <a href='{% url "breadapp:bread_details" bread.id %}'><img class="listImage" src="{% static 'images/bread.png' %}"></a></p>
-    {% endfor %}
-    <br>
-    <h4>Add Bread to Our Collection!</h4>
-    <br>
-    <form class='addBread' action="{% url 'breadapp:bakery_home' %}" method="post">
-        {% csrf_token %}
-        <fieldset>
-            <label for="breadName">Bread: </label>
-            <input id="breadName" name="breadName" type="text" placeholder="name" required>
-        </fieldset>
-        <fieldset>
-            <label for="breadRegion">from: </label>
-            <input id="breadRegion" name="breadRegion" type="text" placeholder="region" required>
-        </fieldset>
-        <input type="submit" value="Add Bread">
-    </form>
-</section>
+<div id='homeBackground' class="backgroundImage" >
+    <a href="{% url 'breadapp:bakery_list' %}">
+    <img id='easelAfar' src="../static/images/easelAfar.png" alt="">
+    </a>
+    <img id='mrToastHome' src="../static/images/mrToast.png" alt="">
+    <img id='mrToastMessageHome' src="../static/images/mrToastMessageHome.png">
+    <a id="doorLinkHome" href="{% url 'breadapp:bakery_list' %}"></a>
+</div>
 
 {% endblock %}

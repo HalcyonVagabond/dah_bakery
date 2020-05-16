@@ -1,0 +1,33 @@
+/* Home Screen */
+
+#homeBackground{
+    background-image: url("../images/homeBakery.jpg");
+}
+
+#easelAfar{
+    position: absolute;
+    bottom: 1%;
+    left: 28%;
+    width: 17%;
+}
+
+#mrToastHome{
+    position: absolute;
+    bottom: 2%;
+    left: 40%;
+    width: 17%;
+}
+#mrToastMessageHome{
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    width: 38%;
+}
+
+#doorLinkHome{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15%;
+    height: 60%;
+}
